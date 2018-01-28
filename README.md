@@ -43,6 +43,8 @@ Setup
 
 5. Run `stack build` in project root folder, this will compile project.
 
+7. Run `stack test` in project root folder, this will run all tests.
+
 6. Start server with `stack exec haskell-phonenumbers-exe`
 
 Usage
