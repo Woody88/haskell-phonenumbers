@@ -13,7 +13,7 @@ import qualified Data.Text as T
 
 data PhoneNumberModule = PhoneNumberModule (Py.Module)
 data PhoneNumber       = PhoneNumber (Py.SomeObject)
-data PhoneNumberFormat = PhoneNumberFormat (Text) deriving Show
+data PhoneNumberFormat = PhoneNumberFormat (Text) deriving (Show, Eq)
 data PhoneNumberMatcher = PhoneNumberMatcher [Py.SomeObject]
 data NoPhone = NoPhone  deriving Show
 

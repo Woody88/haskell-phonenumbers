@@ -21,6 +21,7 @@ import qualified CPython as Py
 import qualified CPython.Protocols.Object as Py
 import qualified CPython.Types.Exception as Py
 import qualified Data.ByteString.Lazy.Char8 as C
+import Data.List (nub)
 
 
 initialize :: IO ()
@@ -33,7 +34,7 @@ parseInternational = \p -> do
  E.handle onException $ do
   pyPhoneModule    <- initializePhoneNumber
   phone            <- parse pyPhoneModule p None
-  result           <- toList <$> formatNumber pyPhoneModule (phone, INTERNATIONAL)
+  result           <- nub . toList <$> formatNumber pyPhoneModule (phone, INTERNATIONAL)
   return $ Right result
   where toList = \pf -> [pf]
 
@@ -41,7 +42,7 @@ parseMatcher :: T.Text -> IO (Either C.ByteString PhoneNumberFormats)
 parseMatcher = \text -> do
  Py.initialize
  pyPhoneModule    <- initializePhoneNumber
- result           <- parsePhoneMatcher pyPhoneModule text
+ result           <- nub <$> parsePhoneMatcher pyPhoneModule text
  return $ Right result
 
 onException :: Py.Exception -> IO (Either C.ByteString b)
