@@ -16,20 +16,21 @@ Also your machine must have
 python verison 3.1+ installed.
 
 For Debian/Ubuntu this python3.x-dev will be required:
-    ```bash
-    apt-get install python3.1-dev
-    ```
+```bash
+apt-get install python3.1-dev
+```
 
 Setup
+-----
 1. Clone this repository:
 
     ```bash
     git clone https://github.com/Woody88/haskell-phonenumbers.git
     ```
-2. Copy Google libphonenumber python library `python-phonenumbers/python/phonenumbers` into python main   
+2. Copy Google's libphonenumber library (python version) `python-phonenumbers/python/phonenumbers` into your python main   
    directory.
 
-3. A useful way to find your python lib path is by running the command below.
+3. A useful way to find your python lib path is by running the command below in a python intepreter.
    On linux machine it will mostly be `usr/lib/python3.x/`:
   ```bash
    mymachine@mymachine:~$ python
@@ -39,15 +40,15 @@ Setup
    >>> import  os
    <module 'posixpath' from '/usr/lib/python3.4/posixpath.py'>
    ```
-4. Run `stack setup` project root folder.
+4. Run `stack setup` in project root folder, this will install ghc compiler all required libraries.
 
-5. Run `stack build` project root folder.
+5. Run `stack build` in project root folder, this will compile project.
 
 6. Start server with `stack exec haskell-phonenumbers-exe`
 
 Usage
 -----
-Accepted phone number format +14165555555 or +1-613-321-1114 Canadian or American.
+Accepted phone number format +14165555555 or +1-613-555-5555 Canadian or American.
 +Country Number-Region-phonenumber
 
 Get a parsed phone number `GET /api/phonenumbers/parse/text/+14165555555`:
