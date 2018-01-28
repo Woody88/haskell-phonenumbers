@@ -56,7 +56,7 @@ Get a parsed phone number `GET /api/phonenumbers/parse/text/+14165555555`:
  ["+1 416-555-5555"]
 ```
 
-Post a file containing phonenumber with above format encoded in base64:
+Post a text containing phone numbers with above format encoded in base64 `GET /api/phonenumbers/parse/text/`:
 ```bash
 curl -X POST -H "Content-Type: text/plain;charset=UTF-8" -H "Accept: application/json" -d "MTUxMDc0ODgyMzAgMTcwMzQ4MDA1MDAg" http://localhost:8080/api/phonenumbers/parse/text
 ["+1 510-748-8230","+1 703-480-0500"]
