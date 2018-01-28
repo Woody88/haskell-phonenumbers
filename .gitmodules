@@ -1,0 +1,3 @@
+[submodule "python-phonenumbers"]
+	path = python-phonenumbers
+	url = https://github.com/daviddrysdale/python-phonenumbers

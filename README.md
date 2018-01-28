@@ -22,10 +22,9 @@ apt-get install python3.1-dev
 
 Setup
 -----
-1. Clone this repository:
-
+1. Clone this repository (have the git recursive options on to get the Google phonenumbers library submodule):
     ```bash
-    git clone https://github.com/Woody88/haskell-phonenumbers.git
+    git clone --recursive https://github.com/Woody88/haskell-phonenumbers.git
     ```
 2. Copy Google's libphonenumber library (python version) `python-phonenumbers/python/phonenumbers` into your python main   
    directory.
