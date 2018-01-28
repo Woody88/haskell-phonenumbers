@@ -1,0 +1,78 @@
+Configuring mmorph-1.1.0...
+Preprocessing library for mmorph-1.1.0..
+Building library for mmorph-1.1.0..
+[1 of 2] Compiling Control.Monad.Morph ( src/Control/Monad/Morph.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Control/Monad/Morph.o )
+
+[;1msrc/Control/Monad/Morph.hs:76:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m76 |[0m[0m [;1m[35mimport qualified Control.Monad.Trans.Error         as E[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:112:20: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m112 |[0m[0m instance MFunctor ([;1m[35mE.ErrorT[0m[0m e) where
+[;1m[34m    |[0m[0m[;1m[35m                    ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:113:19: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m113 |[0m[0m     hoist nat m = [;1m[35mE.ErrorT[0m[0m (nat (E.runErrorT m))
+[;1m[34m    |[0m[0m[;1m[35m                   ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:113:34: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m113 |[0m[0m     hoist nat m = E.ErrorT (nat ([;1m[35mE.runErrorT[0m[0m m))
+[;1m[34m    |[0m[0m[;1m[35m                                  ^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:233:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m233 |[0m[0m instance ([;1m[35mE.Error[0m[0m e) => MMonad (E.ErrorT e) where
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:233:33: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m233 |[0m[0m instance (E.Error e) => MMonad ([;1m[35mE.ErrorT[0m[0m e) where
+[;1m[34m    |[0m[0m[;1m[35m                                 ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:234:17: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m234 |[0m[0m     embed f m = [;1m[35mE.ErrorT[0m[0m (do
+[;1m[34m    |[0m[0m[;1m[35m                 ^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:235:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m235 |[0m[0m         x <- [;1m[35mE.runErrorT[0m[0m (f (E.runErrorT m))
+[;1m[34m    |[0m[0m[;1m[35m              ^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Control/Monad/Morph.hs:235:30: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m235 |[0m[0m         x <- E.runErrorT (f ([;1m[35mE.runErrorT[0m[0m m))
+[;1m[34m    |[0m[0m[;1m[35m                              ^^^^^^^^^^^[0m[0m
+[0m[0m[0m[2 of 2] Compiling Control.Monad.Trans.Compose ( src/Control/Monad/Trans/Compose.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Control/Monad/Trans/Compose.o )
+Installing library in /home/woodson/.stack/snapshots/x86_64-linux/lts-10.3/8.2.2/lib/x86_64-linux-ghc-8.2.2/mmorph-1.1.0-1S4lM6skb3zDTw2xDs9NDW
+Registering library for mmorph-1.1.0..

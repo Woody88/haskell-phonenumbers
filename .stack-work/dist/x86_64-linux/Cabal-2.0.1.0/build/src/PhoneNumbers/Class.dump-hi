@@ -1,0 +1,598 @@
+
+==================== FINAL INTERFACE ====================
+2018-01-28 17:27:13.43875 UTC
+
+interface haskell-phonenumbers-0.1.0.0-G1l6X6dWTOTCGj5StqFqBF:PhoneNumbers.Class 8022
+  interface hash: 00e000bb8828ce693d5ea66ec2d540b2
+  ABI hash: b2523098c4c1475f9143b70e08b3f946
+  export-list hash: 00656512ef9eb6f18f780d00490a3f50
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4fd5a80e5d72e942a9edeebce4a672a3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PhoneNumbers.Class.builtinsPythonModule
+  PhoneNumbers.Class.initializeBuiltinModule
+  PhoneNumbers.Class.initializePhoneNumber
+  PhoneNumbers.Class.onException
+  PhoneNumbers.Class.phonenumberPythonModule
+  PhoneNumbers.Class.toFuncText
+  PhoneNumbers.Class.toText
+  PhoneNumbers.Class.PhoneNumberParser{PhoneNumbers.Class.formatNumber PhoneNumbers.Class.parse PhoneNumbers.Class.parsePhoneMatcher PhoneNumbers.Class.toFunc}
+module dependencies: PhoneNumbers.Types
+package dependencies: aeson-1.2.3.0 array-0.5.2.0
+                      attoparsec-0.13.2.0 base-4.10.1.0 base-compat-0.9.3 binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.10.2 cpython-3.4.0
+                      deepseq-1.4.3.0 dlist-0.8.0.3 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1
+                      hashable-1.2.6.1 integer-gmp-1.0.1.0 integer-logarithms-1.0.2
+                      pretty-1.1.3.3 primitive-0.6.2.0 random-1.1 scientific-0.3.5.2
+                      tagged-0.8.5 template-haskell-2.12.0.0 text-1.2.2.2
+                      th-abstraction-0.2.6.0 time-1.8.0.2 time-locale-compat-0.1.1.3
+                      transformers-0.5.2.0 unordered-containers-0.2.8.0 uuid-types-1.0.3
+                      vector-0.12.0.1
+orphans: attoparsec-0.13.2.0:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.0:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.6.1:Data.Hashable.Generic text-1.2.2.2:Data.Text.Lazy
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         cpython-3.4.0:CPython.Types.List cpython-3.4.0:CPython.Types.Type
+         cpython-3.4.0:CPython.Types.Dictionary
+         cpython-3.4.0:CPython.Types.Tuple text-1.2.2.2:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.2.2:Data.Text.Show base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: aeson-1.2.3.0:Data.Aeson.Types.Internal
+                         attoparsec-0.13.2.0:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.3:Data.DList ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         primitive-0.6.2.0:Data.Primitive.Array tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2:Data.Text text-1.2.2.2:Data.Text.Lazy
+                         th-abstraction-0.2.6.0:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.8.0:Data.HashMap.Base
+                         unordered-containers-0.2.8.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+import  -/  base-4.10.1.0:Control.Exception c134ea327d158f2eebf26e12a1d4ad47
+import  -/  base-4.10.1.0:Control.Monad ebed2e8e7444944e0c1d827c6faf40a4
+import  -/  base-4.10.1.0:Control.Monad.IO.Class 9d78cd0f73a837f3c00753bd212b9f2c
+import  -/  base-4.10.1.0:Data.Functor 2ffda4f936b8f474394d93205750aff3
+import  -/  base-4.10.1.0:Data.Monoid c0108b166e27f747671c7fe4ffb11019
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.IO.Handle.FD e06fbff6d2dafa211cd5a82e8b1f2f2d
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 6e5bb580370d8d71dc5888f723cea4b4
+import  -/  cpython-3.4.0:CPython 91a884c0eaa6eb75b0babdd34ea14bb1
+import  -/  cpython-3.4.0:CPython.Constants 0401ddbcb46908341e4195211bb035d1
+import  -/  cpython-3.4.0:CPython.Internal 905cd686888b54e97135c09cb6746cdb
+import  -/  cpython-3.4.0:CPython.Protocols.Object bcd10895d785ce13e02c574d87573e09
+import  -/  cpython-3.4.0:CPython.Types 6f8dd172d81c2f804b746fd3cd16b0df
+import  -/  cpython-3.4.0:CPython.Types.Exception cacd8eab6633821ae46f874e85e281be
+import  -/  cpython-3.4.0:CPython.Types.List ffabcc998b31f61ba4861832dfb51f38
+import  -/  cpython-3.4.0:CPython.Types.Module a2c42188700b4392b520535e03248d77
+import  -/  cpython-3.4.0:CPython.Types.Unicode d893b40f88eaed143056cc3302c3cc52
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  PhoneNumbers.Types 041704c11de980d6a91b09539a310127
+  exports: ea9684bfc100662bac3a6ba86a7d7b79
+  CountryCode 57b663ec0137efbc974036ab71d14fff
+  INTERNATIONAL 2db987a65c308503baf7fb69898b9dbd
+  None 21fe4a3b138d4d0fc5823be84260860e
+  PhoneNumber cec6ed4077a4b8529a9962053469f710
+  PhoneNumber 9a29fda1b12901e1180c0289da0af94b
+  PhoneNumberFormat 44d7966929b62673f15c391be54374a3
+  PhoneNumberFormat 2341ad7f4515cbb64beeadfcdba595ae
+  PhoneNumberFormats 6d3f4615337ee48cdbc0f6848bf605d9
+  PhoneNumberModule a917ecc61ebc9e5f56f6d0ce123c3e81
+  PhoneNumberModule f6ff9688f42051f1f292bc89ea49dbd8
+  PhoneNumberRegion 1030b32a553cb84f7d243347f883c862
+import  -/  text-1.2.2.2:Data.Text 179ed20f3e41d2270f9a36dd7f638215
+import  -/  text-1.2.2.2:Data.Text.Internal 965a1ec05875083803dc83d56dbb61f7
+43f2b9b3bdae6477e7e39557fe23f2e3
+  $fPhoneNumberParserPhoneNumberModule ::
+    PhoneNumbers.Class.PhoneNumberParser
+      PhoneNumbers.Types.PhoneNumberModule
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ PhoneNumbers.Types.PhoneNumberModule
+                  PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule4
+                    `cast`
+                  (<PhoneNumbers.Types.PhoneNumberModule>_R
+                   ->_R <Data.Text.Internal.Text>_R
+                   ->_R <PhoneNumbers.Types.CountryCode>_R
+                   ->_R Sym (GHC.Types.N:IO[0] <PhoneNumbers.Types.PhoneNumber>_R))
+                  PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule3
+                    `cast`
+                  (<PhoneNumbers.Types.PhoneNumberModule>_R
+                   ->_R <(PhoneNumbers.Types.PhoneNumber,
+                          PhoneNumbers.Types.Region)>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <PhoneNumbers.Types.PhoneNumberFormat>_R))
+                  PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule2
+                    `cast`
+                  (<PhoneNumbers.Types.PhoneNumberModule>_R
+                   ->_R <Data.Text.Internal.Text>_R
+                   ->_R Sym (GHC.Types.N:IO[0] <CPython.Internal.SomeObject>_R))
+                  PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule1
+                    `cast`
+                  (<PhoneNumbers.Types.PhoneNumberModule>_R
+                   ->_R <Data.Text.Internal.Text>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <PhoneNumbers.Types.PhoneNumberFormats>_R)) -}
+0c51262d31703c7858bfe5fe59642e04
+  $fPhoneNumberParserPhoneNumberModule1 ::
+    PhoneNumbers.Types.PhoneNumberModule
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumberFormats #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,1*U(U,U,U)><S,U> -}
+a8dfb4b05c968dd4377f517bd0420062
+  $fPhoneNumberParserPhoneNumberModule2 ::
+    PhoneNumbers.Types.PhoneNumberModule
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          CPython.Internal.SomeObject #)
+  {- Arity: 3, Strictness: <S,1*U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: PhoneNumbers.Types.PhoneNumberModule)
+                   (w1 :: Data.Text.Internal.Text)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { PhoneNumbers.Types.PhoneNumberModule ww1 ->
+                 case w1 of ww2 { Data.Text.Internal.Text ww3 ww4 ww5 ->
+                 PhoneNumbers.Class.$w$ctoFunc ww1 ww3 ww4 ww5 w2 } }) -}
+c7177b070a08fb84c20aae2e0696408e
+  $fPhoneNumberParserPhoneNumberModule3 ::
+    PhoneNumbers.Types.PhoneNumberModule
+    -> (PhoneNumbers.Types.PhoneNumber, PhoneNumbers.Types.Region)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumberFormat #)
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U(U),1*U)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: PhoneNumbers.Types.PhoneNumberModule)
+                   (w1 :: (PhoneNumbers.Types.PhoneNumber, PhoneNumbers.Types.Region))
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { PhoneNumbers.Types.PhoneNumberModule ww1 ->
+                 case w1 of ww2 { (,) ww3 ww4 ->
+                 PhoneNumbers.Class.$w$cformatNumber ww1 ww3 ww4 w2 } }) -}
+61664f1763e2e29d92217bc164cc4401
+  $fPhoneNumberParserPhoneNumberModule4 ::
+    PhoneNumbers.Types.PhoneNumberModule
+    -> Data.Text.Internal.Text
+    -> PhoneNumbers.Types.CountryCode
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumber #)
+  {- Arity: 4, Strictness: <S,1*U(U)><L,1*U(U,U,U)><L,1*U><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: PhoneNumbers.Types.PhoneNumberModule)
+                   (w1 :: Data.Text.Internal.Text)
+                   (w2 :: PhoneNumbers.Types.CountryCode)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { PhoneNumbers.Types.PhoneNumberModule ww1 ->
+                 PhoneNumbers.Class.$w$cparse ww1 w1 w2 w3 }) -}
+a01b408193a44f17efff25161027a358
+  $fPhoneNumberParserPhoneNumberModule5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   PhoneNumbers.Types.$fShowCountryCode4) -}
+3413fde3e9de6b01f39147a7acbca13d
+  $fPhoneNumberParserPhoneNumberModule6 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   PhoneNumbers.Types.$fShowCountryCode6) -}
+2b256729bef29005c4f108fcabb9a301
+  $fPhoneNumberParserPhoneNumberModule7 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule8) -}
+5de326a59d7b8f04d9816656aad0d19d
+  $fPhoneNumberParserPhoneNumberModule8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("parse"#) -}
+219f1418084ee57acc87819f53bd99fb
+  $tc'C:PhoneNumberParser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7075171986385175671##
+                   4418265638399397872##
+                   PhoneNumbers.Class.$trModule
+                   PhoneNumbers.Class.$tc'C:PhoneNumberParser2
+                   1#
+                   PhoneNumbers.Class.$tc'C:PhoneNumberParser1) -}
+9a2b75134b6465c3e530fc065a58d2ed
+  $tc'C:PhoneNumberParser1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+9f38c233e71ba83af8d3713d16f6f2db
+  $tc'C:PhoneNumberParser2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   PhoneNumbers.Class.$tc'C:PhoneNumberParser3) -}
+e2ad1c9fd1a0b3e2b3206a5bab375a28
+  $tc'C:PhoneNumberParser3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'C:PhoneNumberParser"#) -}
+339820cd54dc9955474069dbfdcba967
+  $tcPhoneNumberParser :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1466964636451740825##
+                   15862722517245641832##
+                   PhoneNumbers.Class.$trModule
+                   PhoneNumbers.Class.$tcPhoneNumberParser2
+                   0#
+                   PhoneNumbers.Class.$tcPhoneNumberParser1) -}
+0976c72e6bc1893d3dc187d94e5afb1f
+  $tcPhoneNumberParser1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+84d9701ec85ca85a9772bf4c126f428d
+  $tcPhoneNumberParser2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   PhoneNumbers.Class.$tcPhoneNumberParser3) -}
+9b552bd5d384d44a8ae555e59ce3d591
+  $tcPhoneNumberParser3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PhoneNumberParser"#) -}
+0a75088177b0e7aaa58b535afac6e93b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PhoneNumbers.Class.$trModule3
+                   PhoneNumbers.Class.$trModule1) -}
+413c50c0a329f4af638f9fcf90938293
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PhoneNumbers.Class.$trModule2) -}
+1522945a7032f6d1babff1d8ab8a739f
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PhoneNumbers.Class"#) -}
+5944178112da29688ef7a1397d1c852b
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PhoneNumbers.Class.$trModule4) -}
+0c3987cd1ec7eb508923f6176e0d3f1d
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("haskell-phonenumbers-0.1.0.0-G1l6X6dWTOTCGj5StqFqBF"#) -}
+c142bc645d460e7969ff39d5c86207e5
+  $w$cformatNumber ::
+    CPython.Types.Module.Module
+    -> PhoneNumbers.Types.PhoneNumber
+    -> PhoneNumbers.Types.Region
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumberFormat #)
+  {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,1*U><S,U>,
+     Inline: [0] -}
+eacd3e4aa0180c6d93ec352753afdb46
+  $w$cparse ::
+    CPython.Types.Module.Module
+    -> Data.Text.Internal.Text
+    -> PhoneNumbers.Types.CountryCode
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumber #)
+  {- Arity: 4, Strictness: <L,U><L,1*U(U,U,U)><L,1*U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: CPython.Types.Module.Module)
+                   (w :: Data.Text.Internal.Text)
+                   (w1 :: PhoneNumbers.Types.CountryCode)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule7 of ww1 { Data.Text.Internal.Text ww2 ww3 ww4 ->
+                 case CPython.Types.Unicode.$wtoUnicode
+                        ww2
+                        ww3
+                        ww4
+                        w2 of ds1 { (#,#) ipv ipv1 ->
+                 case CPython.Types.Module.$fObjectModule_$ctoObject
+                        ww of wild { CPython.Internal.SomeObject a4 $dObject1 ptr ->
+                 case CPython.Types.Unicode.$fObjectUnicode_$ctoObject
+                        ipv1 of wild1 { CPython.Internal.SomeObject a5 $dObject2 ptr1 ->
+                 case ptr of wild2 { GHC.ForeignPtr.ForeignPtr fo ds2 ->
+                 case ptr1 of wild3 { GHC.ForeignPtr.ForeignPtr fo1 ds3 ->
+                 case {__pkg_ccall_GC cpython-3.4.0 GHC.Prim.Addr#
+                                                    -> GHC.Prim.Addr#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Addr# #)}
+                        fo
+                        fo1
+                        ipv of wild4 { (#,#) ds ds4 ->
+                 case CPython.Internal.$wstealObject
+                        @ CPython.Internal.SomeObject
+                        @ ()
+                        CPython.Internal.$fObjectSomeObject
+                        ds4
+                        ds of ds5 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.LiftedRep
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds3
+                        ipv2 of s' { DEFAULT ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.LiftedRep
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds2
+                        s' of s'1 { DEFAULT ->
+                 let {
+                   $j :: GHC.Prim.State# GHC.Prim.RealWorld
+                         -> CPython.Internal.SomeObject
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                               PhoneNumbers.Types.PhoneNumber #)
+                     <join 2> {- Arity: 2, Strictness: <S,U><L,U> -}
+                   = \ (ipv4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot]
+                       (ipv5 :: CPython.Internal.SomeObject)[OneShot] ->
+                     case w of ww5 { Data.Text.Internal.Text ww6 ww7 ww8 ->
+                     case CPython.Types.Unicode.$wtoUnicode
+                            ww6
+                            ww7
+                            ww8
+                            ipv4 of ds6 { (#,#) ipv6 ipv7 ->
+                     case CPython.Protocols.Object.callArgs1
+                            @ CPython.Internal.SomeObject
+                            CPython.Internal.$fObjectSomeObject
+                            ipv3
+                            (GHC.Types.:
+                               @ CPython.Internal.SomeObject
+                               (CPython.Types.Unicode.$fObjectUnicode_$ctoObject ipv7)
+                               (GHC.Types.:
+                                  @ CPython.Internal.SomeObject
+                                  ipv5
+                                  (GHC.Types.[] @ CPython.Internal.SomeObject)))
+                            ipv6 of ds7 { (#,#) ipv8 ipv9 ->
+                     (# ipv8, PhoneNumbers.Types.PhoneNumber ipv9 #) } } }
+                 } in
+                 case w1 of wild7 {
+                   PhoneNumbers.Types.CA
+                   -> case PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule6 of ww5 { Data.Text.Internal.Text ww6 ww7 ww8 ->
+                      case CPython.Types.Unicode.$wtoUnicode
+                             ww6
+                             ww7
+                             ww8
+                             s'1 of ds6 { (#,#) ipv4 ipv5 ->
+                      $j ipv4 (CPython.Types.Unicode.$fObjectUnicode_$ctoObject ipv5) } }
+                   PhoneNumbers.Types.GB
+                   -> case PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule5 of ww5 { Data.Text.Internal.Text ww6 ww7 ww8 ->
+                      case CPython.Types.Unicode.$wtoUnicode
+                             ww6
+                             ww7
+                             ww8
+                             s'1 of ds6 { (#,#) ipv4 ipv5 ->
+                      $j ipv4 (CPython.Types.Unicode.$fObjectUnicode_$ctoObject ipv5) } }
+                   PhoneNumbers.Types.None
+                   -> case {__pkg_ccall cpython-3.4.0 GHC.Prim.State#
+                                                        GHC.Prim.RealWorld
+                                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                            GHC.Prim.Addr# #)}
+                             s'1 of wild8 { (#,#) ds6 ds7 ->
+                      case CPython.Internal.$wpeekObject
+                             @ CPython.Internal.SomeObject
+                             @ ()
+                             CPython.Internal.$fObjectSomeObject
+                             ds7
+                             ds6 of ds8 { (#,#) ipv4 ipv5 ->
+                      $j ipv4 ipv5 } } } } } } } } } } } } }) -}
+c247519b28cecdb1f846b45040e113c6
+  $w$ctoFunc ::
+    CPython.Types.Module.Module
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          CPython.Internal.SomeObject #)
+  {- Arity: 5, Strictness: <L,U><S,U><S,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: CPython.Types.Module.Module)
+                   (ww1 :: GHC.Prim.ByteArray#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CPython.Types.Unicode.$wtoUnicode
+                        ww1
+                        ww2
+                        ww3
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 CPython.Protocols.Object.callMethod2
+                   @ CPython.Types.Module.Module
+                   CPython.Types.Module.$fObjectModule
+                   ww
+                   ipv1
+                   ipv }) -}
+43f2b9b3bdae6477e7e39557fe23f2e3
+  class PhoneNumberParser a where
+    parse :: a
+             -> Data.Text.Internal.Text
+             -> PhoneNumbers.Types.CountryCode
+             -> GHC.Types.IO PhoneNumbers.Types.PhoneNumber
+    formatNumber :: a
+                    -> PhoneNumbers.Types.PhoneNumberRegion
+                    -> GHC.Types.IO PhoneNumbers.Types.PhoneNumberFormat
+    toFunc :: a
+              -> Data.Text.Internal.Text
+              -> GHC.Types.IO CPython.Internal.SomeObject
+    parsePhoneMatcher :: a
+                         -> Data.Text.Internal.Text
+                         -> GHC.Types.IO PhoneNumbers.Types.PhoneNumberFormats
+    {-# MINIMAL parse, formatNumber, toFunc, parsePhoneMatcher #-}
+56305913b45742685107023221f68c60
+  builtinsPythonModule :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   PhoneNumbers.Class.builtinsPythonModule1) -}
+fc7dd717246970274222b581120085f2
+  builtinsPythonModule1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("builtins"#) -}
+e6efd73618751dbad788b9399115aedf
+  initializeBuiltinModule :: GHC.Types.IO CPython.Types.Module.Module
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                PhoneNumbers.Class.initializeBuiltinModule1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <CPython.Types.Module.Module>_R)) -}
+cb1348f99cbbe55dafa31f8df721e755
+  initializeBuiltinModule1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          CPython.Types.Module.Module #)
+  {- Arity: 1,
+     Unfolding: (CPython.Types.Module.importModule1
+                   PhoneNumbers.Class.builtinsPythonModule) -}
+d960ac4ac7e97f62238429417c831ec5
+  initializePhoneNumber ::
+    GHC.Types.IO PhoneNumbers.Types.PhoneNumberModule
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PhoneNumbers.Class.initializePhoneNumber1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0]
+                          <PhoneNumbers.Types.PhoneNumberModule>_R)) -}
+26cde9416b9e40e468490863b970590c
+  initializePhoneNumber1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          PhoneNumbers.Types.PhoneNumberModule #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case PhoneNumbers.Class.phonenumberPythonModule of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case CPython.Types.Module.$wimportModule
+                        ww1
+                        ww2
+                        ww3
+                        s of ds { (#,#) ipv ipv1 ->
+                 (# ipv, PhoneNumbers.Types.PhoneNumberModule ipv1 #) } }) -}
+4d7f5595b7b864695725cfb6a6d16dfb
+  onException :: CPython.Internal.Exception -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U(A,1*U,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PhoneNumbers.Class.onException1
+                  `cast`
+                (<CPython.Internal.Exception>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+23fd1785376850d3dea17e6a936052aa
+  onException1 ::
+    CPython.Internal.Exception
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U(A,1*U,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (exc :: CPython.Internal.Exception)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 CPython.Protocols.Object.print1
+                   @ CPython.Internal.SomeObject
+                   CPython.Internal.$fObjectSomeObject
+                   (CPython.Internal.exceptionValue exc)
+                   GHC.IO.Handle.FD.stdout
+                   eta) -}
+64fe58b98296d01d33971524083fcf65
+  phonenumberPythonModule :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   PhoneNumbers.Class.phonenumberPythonModule1) -}
+ab5060ed46eef2a63c762d2a35cd2722
+  phonenumberPythonModule1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("phonenumbers"#) -}
+c449ae09a2bd865cd64ff7633653898b
+  toFuncText ::
+    Data.Text.Internal.Text -> GHC.Types.IO CPython.Internal.SomeObject
+  {- Arity: 2, Strictness: <S(SSS),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PhoneNumbers.Class.toFuncText1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <CPython.Internal.SomeObject>_R)) -}
+e5d133a61e4d1fbcc9e49dd5c69e9cd5
+  toFuncText1 ::
+    Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          CPython.Internal.SomeObject #)
+  {- Arity: 2, Strictness: <S(SSS),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t :: Data.Text.Internal.Text)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case t of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case CPython.Types.Unicode.$wtoUnicode
+                        ww1
+                        ww2
+                        ww3
+                        eta of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    CPython.Types.Unicode.$fObjectUnicode_$ctoObject ipv1 #) } }) -}
+29241a4c02c65d3a22ad9bd40f6c6ff8
+  toText ::
+    CPython.Internal.SomeObject -> GHC.Types.IO Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PhoneNumbers.Class.toText1
+                  `cast`
+                (<CPython.Internal.SomeObject>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
+e6cfe2473e71e069591d336fba6f9f9a
+  toText1 ::
+    CPython.Internal.SomeObject
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: (\ (o :: CPython.Internal.SomeObject)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case o of wild { CPython.Internal.SomeObject a2 $dObject1 ptr ->
+                 case ptr of wild1 { GHC.ForeignPtr.ForeignPtr fo ds1 ->
+                 case {__pkg_ccall_GC cpython-3.4.0 GHC.Prim.Addr#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Addr# #)}
+                        fo
+                        s of wild2 { (#,#) ds ds2 ->
+                 case CPython.Internal.$wstealObject
+                        @ CPython.Types.Unicode.Unicode
+                        @ ()
+                        CPython.Types.Unicode.$fObjectUnicode
+                        ds2
+                        ds of ds3 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.LiftedRep
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds1
+                        ipv of s' { DEFAULT ->
+                 CPython.Types.Unicode.fromUnicode1 ipv1 s' } } } } }) -}
+instance PhoneNumbers.Class.PhoneNumberParser [PhoneNumbers.Types.PhoneNumberModule]
+  = PhoneNumbers.Class.$fPhoneNumberParserPhoneNumberModule
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
