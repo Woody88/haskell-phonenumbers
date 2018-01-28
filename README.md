@@ -7,8 +7,8 @@ written by John Millikin.
 Important Notes
 ---------------
 
-Please have Stack installed. It will install GHC and other important libraries.
-There is also a link to installing haskell platform if you wish to have it on their machine.
+Please have Stack installed. It will install GHC compiler and other important libraries.
+There is also a link to installing haskell platform if you wish to have it on your machine.
 * [Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/)
 * [Haskell](https://www.haskell.org/downloads)
 
