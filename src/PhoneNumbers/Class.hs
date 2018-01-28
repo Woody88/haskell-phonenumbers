@@ -82,25 +82,3 @@ instance PhoneNumberParser PhoneNumberModule where
                                                value <- formatNumber s' ((PhoneNumber num), INTERNATIONAL)
                                                return $ x ++ [value]
                                                ) [(PhoneNumberFormat "")] m
-
-
--- main :: IO ()
--- main = do
---  Py.initialize
---  E.handle onException $ do
---   -- parseInternational' "+1613321114"
---   let text = ["+15107488230 if it's before 9:30, or on +17034800500 after 10am.", "yo"]
---   phMod@(PhoneNumberModule phonenumbers)   <- initializePhoneNumber
---   builtins <-Py.importModule "builtins"
---   toList <-Py.getAttribute builtins =<< Py.toUnicode "list"
---   phonematcher <- Py.getAttribute phonenumbers =<< Py.toUnicode "PhoneNumberMatcher"
---   country <- Py.toObject <$> Py.toUnicode "CA"
---   t <- Py.toObject <$> Py.toUnicode text
---   v <- Py.callArgs phonematcher [t, country] >>= Py.iterableToList >>= Py.fromList
---   p <- foldM (\x b-> do
---                  num <- Py.getAttribute b =<< Py.toUnicode "number"
---                  value <- formatNumber phMod ((PhoneNumber num), INTERNATIONAL)
---                  return $ x ++ [value]
---                  ) [(PhoneNumberFormat "")] v
---   print p
---   return ()
