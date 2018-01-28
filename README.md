@@ -1,7 +1,7 @@
 haskell-phonenumbers
 ============================
 
-Haskell Phonenumber Library using Google libphonenumber (python version) and [John Millikin](https://john-millikin.com/)'s [`cpython`](http://hackage.haskell.org/package/cpython) package
+Haskell Phonenumber Library using Google libphonenumber (python version) and [John Millikin](https://john-millikin.com/software/haskell-cpython)'s [`cpython`](http://hackage.haskell.org/package/cpython) package
 written by John Millikin.
 
 Important Notes
