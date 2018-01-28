@@ -12,37 +12,40 @@
 module PhoneNumbers (parseInternational, parseMatcher, initialize) where
 
 import PhoneNumbers.Types
-import PhoneNumbers.Class (initializePhoneNumber, parsePhoneMatcher, parse, formatNumber)
+import PhoneNumbers.Class (initializePhoneNumber, parsePhoneMatcher, parse, formatNumber, toText)
 import qualified Control.Exception as E
 import qualified Data.Text as T
 import qualified Data.ByteString.Char8 as B
 import System.IO (stdout)
 import qualified CPython as Py
-import qualified CPython.Types.Unicode as Py hiding (length)
 import qualified CPython.Protocols.Object as Py
 import qualified CPython.Types.Exception as Py
+import qualified Data.ByteString.Lazy.Char8 as C
 
 
 initialize :: IO ()
 initialize = Py.initialize
 
-parseInternational :: T.Text -> IO PhoneNumberFormats
+-- PhoneNumberFormats
+parseInternational :: T.Text -> IO (Either C.ByteString PhoneNumberFormats)
 parseInternational = \p -> do
  Py.initialize
- pyPhoneModule    <- initializePhoneNumber
- phone           <- parse pyPhoneModule p None
- (\pf -> [pf] ) <$> formatNumber pyPhoneModule (phone, INTERNATIONAL)
+ E.handle onException $ do
+  pyPhoneModule    <- initializePhoneNumber
+  phone            <- parse pyPhoneModule p None
+  result           <- toList <$> formatNumber pyPhoneModule (phone, INTERNATIONAL)
+  return $ Right result
+  where toList = \pf -> [pf]
 
-parseMatcher :: T.Text -> IO PhoneNumberFormats
+parseMatcher :: T.Text -> IO (Either C.ByteString PhoneNumberFormats)
 parseMatcher = \text -> do
  Py.initialize
  pyPhoneModule    <- initializePhoneNumber
- parsePhoneMatcher pyPhoneModule text
+ result           <- parsePhoneMatcher pyPhoneModule text
+ return $ Right result
 
---
---   -- phone <- parse phonenumbers "+1613321114" None
---   -- (PhoneNumberFormat phoneNational) <- formatNumber phonenumbers (phone, INTERNATIONAL)
---   -- i <- Py.iterableToList v
---   -- l <- Py.length i
---   print $ length v
---   return ()
+onException :: Py.Exception -> IO (Either C.ByteString b)
+onException exc = do
+ errText <- T.unpack <$> toText (Py.exceptionValue exc)
+ packToBytestring errText
+ where packToBytestring = \t ->  return $ Left $  C.pack t

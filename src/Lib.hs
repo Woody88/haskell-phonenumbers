@@ -5,6 +5,8 @@
 {-# LANGUAGE TypeSynonymInstances   #-}
 {-# LANGUAGE FlexibleInstances   #-}
 {-# LANGUAGE MultiParamTypeClasses   #-}
+{-# LANGUAGE FlexibleContexts   #-}
+
 module Lib
     ( startApp
     , app
@@ -22,11 +24,13 @@ import Network.Wai.Handler.Warp
 import Network.Wai.Logger
 import Network.Wai.Middleware.RequestLogger
 import Servant
+import Servant.Server
 import           Servant.HTML.Blaze
 import qualified Text.Blaze.Html5   as H
 import qualified Text.Blaze.Html.Renderer.Utf8 as H (renderHtml)
 import qualified Data.ByteString as B
 import qualified Data.ByteString.Base64 as B64
+import qualified Data.ByteString.Lazy.Char8 as C
 import PhoneNumbers       as P
 import PhoneNumbers.Types as P
 
@@ -43,6 +47,7 @@ startApp = do
         serverRunningMessage >> runSettings settings app
     where port = 8080
           serverRunningMessage = putStrLn $ "Server Running on port: " ++ show port
+
 app :: Application
 app = serve api server
 
@@ -57,16 +62,25 @@ server =  return noPhone
            parsePhoneFile file = parsePhoneFile' file
 
 parsePhone' :: T.Text -> Handler PhoneNumberFormats
-parsePhone' p = liftIO $ P.parseInternational p
+parsePhone' p =  do
+    result <- liftIO $ P.parseInternational p
+    appHandler $ result
+    where pHandler (Right result)    = return result
+          pHandler (Left errMessage) = throwError $ err400 { errBody = errMessage }
+
 
 parsePhoneFile' :: T.Text -> Handler PhoneNumberFormats
 parsePhoneFile' base64Text = parseB64 $ B64.decode $ T.encodeUtf8 base64Text
-    where parseB64 (Left t)  = return [(PhoneNumberFormat "Could not parse base64 text")]
-          parseB64 (Right t) = liftIO $ P.parseMatcher . T.decodeUtf8 $ t
+    where parseB64 (Left t)  = throwError $ err400 { errBody = "Could not parse base64 text" }
+          parseB64 (Right t) = do { result <- liftIO $ P.parseMatcher . T.decodeUtf8 $ t; appHandler $ result }
+
 
 noPhone :: PhoneNumberFormats
 noPhone = []
 
+appHandler :: Either C.ByteString b -> Handler b
+appHandler (Right result)    = return result
+appHandler (Left errMessage) = throwError $ err400 { errBody = errMessage }
 -- Detect an error with this run function. It seems like warp cuts off the ';' in the accept head
 -- Whic caused problem  when tryin to implement the POST Request. Welkin from #haskell IRC told me that
 -- he found this issue last issue.

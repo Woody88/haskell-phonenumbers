@@ -14,7 +14,6 @@ import qualified CPython.Types.Unicode as Py hiding (length)
 import qualified CPython.Types.List as Py
 import qualified CPython.Types as Py
 import qualified CPython.Types.Module as Py
-import qualified CPython.Types.Exception as Py
 import qualified CPython.Constants as Py
 
 
@@ -45,9 +44,6 @@ initializePhoneNumber :: IO PhoneNumberModule
 initializePhoneNumber = initializeModule <$> (Py.importModule phonenumberPythonModule)
  where initializeModule :: Py.Module -> PhoneNumberModule
        initializeModule = \p -> PhoneNumberModule p
-
-onException :: Py.Exception -> IO ()
-onException exc = Py.print (Py.exceptionValue exc) stdout
 
 instance PhoneNumberParser PhoneNumberModule where
  toFunc = \(PhoneNumberModule m) t -> Py.getAttribute m =<< Py.toUnicode t
