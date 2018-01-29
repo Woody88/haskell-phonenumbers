@@ -39,5 +39,5 @@ spec = with (return app) $ do
                 phonenumberBase64 = C.pack . U.toString . B64.encode $ phonenumber
                 url     = "/api/phonenumbers/parse/text/"
                 header = [("Content-Type", "text/plain;charset=UTF-8"), ("Accept", "application/json")]
-                jsonPhoneResponse = [json|["+1 416-555-5555", "+1 416-555-5555"]|]
+                jsonPhoneResponse = [json|["+1 416-555-5555"]|]
             (request methodPost url header phonenumberBase64) `shouldRespondWith` jsonPhoneResponse { matchStatus = 200 }
