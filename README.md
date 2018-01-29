@@ -37,6 +37,7 @@ Setup
    [GCC 5.4.0 20160609] on linux
    Type "help", "copyright", "credits" or "license" for more information.
    >>> import  os
+   >>> os.path
    <module 'posixpath' from '/usr/lib/python3.4/posixpath.py'>
    ```
 4. Run `stack setup` in project root folder, this will install ghc compiler all required libraries.
